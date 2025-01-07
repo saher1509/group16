@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AboutUs.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="HomePage.html">
+            <img src="GYM-LOGO.png" alt="Gym Equipment Logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="AboutUs.html" class="active">ABOUT US</a></li>
+            <li><a href="ShopPage.html">SHOP</a></li>
+        </ul>
+    </nav>
+    <div class="icons">
+        <a href="Cart.html" class="icon cart-icon">
+            🛒<span id="cart-count">0</span>
+        </a>
+        <a href="#" class="icon-search">🔍</a>
+        <div id="search-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="search-by-label">Search by:</p>
+                <select id="search-filter">
+                    <option value="name">Name</option>
+                    <option value="category">Category</option>
+                    <option value="price">Price</option>
+                </select>
+                <input id="search-input" type="text" placeholder="Enter your search...">
+                <button id="search-button">Search</button>
+                <div id="search-results"></div>
+                <p id="no-results-message">Sorry, no results found!</p>
+            </div>
+        </div>
+    </div>
+
+</header>
+<main>
+    <h1>ABOUT US</h1>
+    <p>
+        As two passionate fitness enthusiasts, we founded GYM EQUIPMENT to share our love for sports and fitness with
+        the world.
+        Our mission is to provide high-quality fitness equipment that empowers individuals to achieve their health and
+        fitness goals.
+        We believe that access to top-of-the-line equipment is essential for a rewarding and effective workout
+        experience.
+        Your progress and success are our ultimate measure of achievement.
+    </p>
+    <div class="images-section">
+        <img src="gym-equipment1.png" alt="Gym Equipment 1">
+        <img src="GYM-LOGO.png" alt="Gym Logo">
+        <img src="gym-equipment2.png" alt="Gym Equipment 2">
+    </div>
+</main>
+<footer>
+    <a href="Contact.html" class="footer-link">CONTACT US</a>
+</footer>
+
+<script src="ShopPage.js"></script> <!-- to display the updated quantity for the  shopping cart from this page -->
+<script src="Search.js"></script>
+</body>
+</html>

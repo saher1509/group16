@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cart.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="HomePage.html">
+            <img src="GYM-LOGO.png" alt="Gym Equipment Logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="AboutUs.html">ABOUT US</a></li>
+            <li><a href="ShopPage.html">SHOP</a></li>
+        </ul>
+    </nav>
+    <div class="icons">
+        <a href="Cart.html" class="icon cart-icon">
+            🛒<span id="cart-count">0</span>
+        </a>
+        <a href="#" class="icon-search">🔍</a>
+        <div id="search-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="search-by-label">Search by:</p>
+                <select id="search-filter">
+                    <option value="name">Name</option>
+                    <option value="category">Category</option>
+                    <option value="price">Price</option>
+                </select>
+                <input id="search-input" type="text" placeholder="Enter your search...">
+                <button id="search-button">Search</button>
+                <div id="search-results"></div>
+                <p id="no-results-message">Sorry, no results found!</p>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <!-- Empty Cart Section -->
+    <div id="empty-cart" class="cart-empty">
+        <h1>SHOPPING CART</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>Your shopping cart is empty</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="ShopPage.html" class="return-to-shop">Return to shop</a>
+    </div>
+
+    <!-- Filled Cart Section -->
+    <div id="filled-cart" class="cart-filled">
+        <h1>SHOPPING CART</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            </thead>
+            <tbody id="cart-items">
+            <!-- Items will be dynamically inserted here -->
+            </tbody>
+        </table>
+        <div id="cart-total">
+            <strong>Total: </strong><span id="total-amount">0</span>
+            <a href="Checkout.html" class="checkout-button">Proceed to checkout</a>
+        </div>
+
+
+    </div>
+</main>
+<footer>
+    <a href="Contact.html" class="footer-link">CONTACT US</a>
+</footer>
+<script src="Cart.js" defer></script>
+<script src="Search.js"></script>
+</body>
+</html>

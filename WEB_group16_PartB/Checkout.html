@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Checkout.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="HomePage.html">
+            <img src="GYM-LOGO.png" alt="Gym Equipment Logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="AboutUs.html">ABOUT US</a></li>
+            <li><a href="ShopPage.html">SHOP</a></li>
+        </ul>
+    </nav>
+    <div class="icons">
+        <a href="Cart.html" class="icon cart-icon">
+            🛒<span id="cart-count">0</span>
+        </a>
+        <a href="#" class="icon-search">🔍</a>
+        <div id="search-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="search-by-label">Search by:</p>
+                <select id="search-filter">
+                    <option value="name">Name</option>
+                    <option value="category">Category</option>
+                    <option value="price">Price</option>
+                </select>
+                <input id="search-input" type="text" placeholder="Enter your search...">
+                <button id="search-button">Search</button>
+                <div id="search-results"></div>
+                <p id="no-results-message">Sorry, no results found!</p>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <h1>CREATE ORDER</h1>
+    <form id="order-form" novalidate>
+        <section class="billing-shipping">
+            <h2>Shipping information</h2>
+            <div>
+                <label for="first-name">First name <span class="required">*</span></label>
+                <input type="text" id="first-name" name="first-name" placeholder="Enter your first name..">
+                <span id="first-name-error" class="error-message"></span>
+            </div>
+            <div>
+                <label for="last-name">Last name <span class="required">*</span></label>
+                <input type="text" id="last-name" name="last-name" placeholder="Enter your last name..">
+                <span id="last-name-error" class="error-message"></span>
+            </div>
+            <div>
+                <label for="city">City <span class="required">*</span></label>
+                <input type="text" id="city" name="city" placeholder="Enter your city..">
+                <span id="city-error" class="error-message"></span>
+            </div>
+            <div>
+                <label for="street-address">Street address <span class="required">*</span></label>
+                <input type="text" id="street-address" name="street-address" placeholder="Enter your street-address..">
+                <span id="street-address-error" class="error-message"></span>
+            </div>
+            <div>
+                <label for="phone">Phone <span class="required">*</span></label>
+                <input type="text" id="phone" name="phone" placeholder="Enter your phone number..">
+                <span id="phone-error" class="error-message"></span>
+            </div>
+            <div>
+                <label for="email">Email address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Enter your email..">
+                <span id="email-error" class="error-message"></span>
+            </div>
+            <div>
+                <label for="notes">Order notes (optional)</label>
+                <textarea id="notes" name="notes" placeholder="Enter your notes.."></textarea>
+            </div>
+        </section>
+
+
+        <div class="order-summary">
+            <h2>Your Order</h2>
+            <table class="order-table">
+                <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Subtotal</th>
+                </tr>
+                </thead>
+                <tbody id="order-items">
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>Total</th>
+                    <td id="order-subtotal">₪0.00</td>
+                </tr>
+
+                </tfoot>
+            </table>
+            <button type="submit">Place Order</button>
+        </div>
+    </form>
+    <div id="success-message" class="hidden">
+        <h2>Thank you!</h2>
+        <p>Your order has been placed successfully.</p>
+        <button id="go-home-button">Go to Home Page</button>
+    </div>
+</main>
+<footer>
+    <a href="Contact.html" class="footer-link">CONTACT US</a>
+</footer>
+<script src="Checkout.js"></script>
+<script src="ShopPage.js"></script> <!-- to display the updated quantity for the shopping cart from this page -->
+<script src="Search.js"></script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+/* General Reset */
+body, h1, p, img, a, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent box-sizing across elements */
+}
+
+/* General Styles */
+body {
+    font-family: Calibri, sans-serif;
+    line-height: 1.6; /* Sets the line height for better readability */
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Arranges content vertically */
+    min-height: 100vh; /* Ensures the footer sticks to the bottom */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between; /* Aligns items to the ends */
+    align-items: center; /* Vertically aligns items */
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 10px 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center; /* Centers the logo vertically */
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px; /* Adds spacing between the image and text */
+}
+
+header .logo span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none; /* Removes default list styling */
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none; /* Removes underline */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease; /* Adds smooth hover effect */
+}
+
+header .icons .icon {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #B93639; /* Changes background on hover */
+    border-radius: 5px; /* Adds rounded corners */
+    color: #FFFFFF;
+}
+
+header .icons .icon:hover {
+    background-color: #B93639;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+
+/* Main Content */
+main {
+    flex: 1; /* Allows main content to grow */
+    max-width: 800px; /* Restricts content width */
+    margin: 40px auto; /* Centers content horizontally */
+    text-align: center; /* Centers text */
+}
+
+main h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+main p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify; /* Aligns text to both sides */
+    color: #000000;
+    margin: 20px auto;
+    max-width: 800px; /* Restricts width for better readability */
+}
+
+main .images-section {
+    display: flex;
+    justify-content: center; /* Centers images */
+    gap: 20px; /* Adds space between images */
+    flex-wrap: wrap; /* Moves items to a new row if necessary */
+    margin-top: 20px;
+}
+
+main .images-section img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px; /* Rounds image corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer .footer-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+footer .footer-link:hover {
+    background-color: #B93639;
+    border-radius: 5px;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hides the modal by default */
+    position: fixed; /* Fixes position relative to viewport */
+    z-index: 1000; /* Ensures the modal appears above other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Adds scrolling if content overflows */
+    background-color: rgba(0, 0, 0, 0.5); /* Adds semi-transparent background */
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    margin: 10% auto; /* Centers the modal horizontally and vertically */
+    padding: 20px;
+    border-radius: 15px; /* Adds rounded corners */
+    width: 40%; /* Sets the modal width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+    text-align: center;
+    position: relative; /* Positions elements within the modal */
+}
+
+/* Close button for modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Adds smooth hover effect */
+}
+
+.close:hover,
+.close:focus {
+    color: #B93639; /* Changes color on hover or focus */
+}
+
+/* Search input */
+#search-input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Search button */
+#search-button {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; /* Adds smooth hover effect */
+}
+
+#search-button:hover {
+    background-color: #B93639;
+}
+
+/* Search results section */
+#search-results {
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto; /* Adds scrolling if results exceed max height */
+    text-align: left;
+}
+
+.result-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.result-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #B93639;
+    cursor: pointer;
+    transition: text-decoration 0.3s ease; /* Adds smooth underline effect */
+}
+
+.result-item h3:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+.icon-search {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.icon-search:hover {
+    background-color: #B93639;
+    border-radius: 5px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+a.icon-search {
+    text-decoration: none !important; /* שימוש ב-!important להסרת קו */
+}
+
+/* Message when no search results are found */
+#no-results-message {
+    display: none; /* Hides by default */
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Filter dropdown styling */
+#search-filter {
+    display: block;
+    width: 25%;
+    padding: 10px;
+    margin: 0 auto 15px auto;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#search-filter:hover,
+#search-filter:focus {
+    border-color: #B93639;
+    background-color: #f9f9f9;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    header .logo img {
+        height: 40px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px; /* Adds spacing between items */
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    main .images-section img {
+        width: 100%; /* Makes images full-width */
+        max-width: 300px; /* Restricts maximum width */
+        height: auto;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #search-filter {
+        width: 90%; /* Expands width for smaller screens */
+    }
+
+    .modal-content {
+        width: 90%; /* Adjusts modal size for smaller screens */
+        padding: 15px;
+    }
+}

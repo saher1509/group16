@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="WeightBench.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="HomePage.html">
+            <img src="GYM-LOGO.png" alt="Gym Equipment Logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="AboutUs.html">ABOUT US</a></li>
+            <li><a href="ShopPage.html">SHOP</a></li>
+        </ul>
+    </nav>
+    <div class="icons">
+        <a href="Cart.html" class="icon cart-icon">
+            🛒<span id="cart-count">0</span>
+        </a>
+        <a href="#" class="icon-search">🔍</a>
+        <div id="search-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="search-by-label">Search by:</p>
+                <select id="search-filter">
+                    <option value="name">Name</option>
+                    <option value="category">Category</option>
+                    <option value="price">Price</option>
+                </select>
+                <input id="search-input" type="text" placeholder="Enter your search...">
+                <button id="search-button">Search</button>
+                <div id="search-results"></div>
+                <p id="no-results-message">Sorry, no results found!</p>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="product-page">
+        <div class="product-image">
+            <img src="product8.png" alt="Weight Bench">
+        </div>
+        <div class="product-details">
+            <h1>Weight Bench</h1>
+            <p class="price">1,000 ₪</p>
+            <div class="quantity">
+                <input type="number" value="1" min="1">
+            </div>
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+    </div>
+    <div class="description-container">
+        <div class="description">
+            <h2>Description</h2>
+            <p>
+                The <strong>Weight Bench</strong> is a fundamental piece of equipment for any fitness enthusiast,
+                designed to support a variety of strength training exercises.
+                It features an ergonomic design for maximum comfort and stability during workouts.
+                Durable materials ensure long-lasting performance, making it ideal for both home and professional gyms.
+            </p>
+        </div>
+    </div>
+
+</main>
+<footer>
+    <a href="Contact.html" class="footer-link">CONTACT US</a>
+</footer>
+
+<script src="WeightBench.js"></script>
+<script src="ShopPage.js"></script>  <!-- to display the updated quantity for the  shopping cart from this page -->
+<script src="Search.js"></script>
+</body>
+</html>
