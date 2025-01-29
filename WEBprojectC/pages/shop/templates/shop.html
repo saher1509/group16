@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'shop' %}
+
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('shop.static', filename='css/shop.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+<h1>SHOP</h1>
+<section class="products">
+    <div class="product">
+        <a href="{{ url_for('FT1Inspire.index') }}">
+            <img src="{{ url_for('shop.static', filename='images/product1.png') }}" alt="FT1 Inspire">
+        </a>
+        <h2>FT1 Inspire</h2>
+        <p>10,000 ₪</p>
+        <button>Add to cart</button>
+    </div>
+    <div class="product">
+        <a href="{{ url_for('X98Cross.index') }}">
+            <img src="{{ url_for('shop.static', filename='images/product2.png') }}" alt="X98 Cross">
+        </a>
+        <h2>X98 Cross</h2>
+        <p>2,000 ₪</p>
+        <button>Add to cart</button>
+    </div>
+    <div class="product">
+        <a href="{{ url_for('SpeederF60.index') }}">
+            <img src="{{ url_for('shop.static', filename='images/product3.png') }}" alt="Speeder F60">
+        </a>
+        <h2>Speeder F60</h2>
+        <p>3,000 ₪</p>
+        <button>Add to cart</button>
+    </div>
+    <div class="product">
+        <a href="{{ url_for('KETTLERKE3086d.index') }}">
+            <img src="{{ url_for('shop.static', filename='images/product4.png') }}" alt="KETTLER KE3086d">
+        </a>
+        <h2>KETTLER KE3086d</h2>
+        <p>9,000 ₪</p>
+        <button>Add to cart</button>
+    </div>
+    <div class="product">
+        <a href="{{ url_for('SquatsMachine.index') }}">
+            <img src="{{ url_for('shop.static', filename='images/product5.png') }}" alt="Squats Machine">
+        </a>
+        <h2>Squats Machine</h2>
+        <p>3,000 ₪</p>
+        <button>Add to cart</button>
+    </div>
+    <div class="product">
+        <a href="{{ url_for('Dumbbell10Kg.index') }}">
+            <img src="{{ url_for('shop.static', filename='images/product6.png') }}" alt="Dumbbell 10 Kg">
+        </a>
+        <h2>Dumbbell 10 Kg</h2>
+        <p>100 ₪</p>
+        <button>Add to cart</button>
+    </div>
+    <div class="product">
+        <a href="{{ url_for('CurlBar.index') }}">
+            <img src="{{ url_for('shop.static', filename='images/product7.png') }}" alt="Curl Bar">
+        </a>
+        <h2>Curl Bar</h2>
+        <p>300 ₪</p>
+        <button>Add to cart</button>
+    </div>
+    <div class="product">
+        <a href="{{ url_for('WeightBench.index') }}">
+            <img src="{{ url_for('shop.static', filename='images/product8.png') }}" alt="Weight Bench">
+        </a>
+        <h2>Weight Bench</h2>
+        <p>1,000 ₪</p>
+        <button>Add to cart</button>
+    </div>
+</section>
+
+{% endblock %}
+
+
+{% block page_body_js %}
+<script src="{{ url_for('shop.static', filename='js/shop.js') }}"></script>
+{% endblock %}

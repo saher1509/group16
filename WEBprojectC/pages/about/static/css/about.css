@@ -1,0 +1,76 @@
+/* General Reset */
+body, h1, p, img, a, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent box-sizing across elements */
+}
+
+/* General Styles */
+body {
+    font-family: Calibri, sans-serif;
+    line-height: 1.6; /* Sets the line height for better readability */
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Arranges content vertically */
+    min-height: 100vh; /* Ensures the footer sticks to the bottom */
+}
+
+/* Main Content */
+main {
+    flex: 1; /* Allows main content to grow */
+    max-width: 800px; /* Restricts content width */
+    margin: 40px auto; /* Centers content horizontally */
+    text-align: center; /* Centers text */
+}
+
+main h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+main p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify; /* Aligns text to both sides */
+    color: #000000;
+    margin: 20px auto;
+    max-width: 800px; /* Restricts width for better readability */
+}
+
+main .images-section {
+    display: flex;
+    justify-content: center; /* Centers images */
+    gap: 20px; /* Adds space between images */
+    flex-wrap: wrap; /* Moves items to a new row if necessary */
+    margin-top: 20px;
+}
+
+main .images-section img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px; /* Rounds image corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+
+    main {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    main .images-section img {
+        width: 100%; /* Makes images full-width */
+        max-width: 300px; /* Restricts maximum width */
+        height: auto;
+    }
+
+}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'FT1 Inspire' %}
+
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('shop.static', filename='css/products.css') }}">
+{% endblock %}
+
+{% block page_body_main_content %}
+<div class="product-page">
+    <div class="product-image" data-size="large">
+        <img src="{{ url_for('FT1Inspire.static', filename='images/product1.png') }}" alt="FT1 Inspire">
+    </div>
+    <div class="product-details">
+        <h1>FT1 Inspire</h1>
+        <p class="price">10,000 ₪</p>
+        <div class="quantity">
+            <input type="number" id="product-quantity" value="1" min="1">
+        </div>
+        <button class="add-to-cart">Add to cart</button>
+    </div>
+</div>
+<div class="description-container">
+    <div class="description">
+        <h2>Description</h2>
+        <p>
+            The <strong>FT1 Inspire</strong> is the ultimate multi-functional strength training machine,
+            designed for professional and home use. With adjustable pulleys, a durable build, and advanced
+            ergonomics,
+            this equipment provides an all-in-one solution for total body workouts.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_body_js %}
+<script src="{{ url_for('FT1Inspire.static', filename='js/FT1Inspire.js') }}"></script>
+<script src="{{ url_for('shop.static', filename='js/shop.js') }}"></script>
+{% endblock %}

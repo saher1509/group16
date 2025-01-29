@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Weight Bench' %}
+
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('shop.static', filename='css/products.css') }}">
+{% endblock %}
+
+{% block page_body_main_content %}
+<div class="product-page">
+    <div class="product-image">
+        <img src="{{ url_for('WeightBench.static', filename='images/product8.png') }}" alt="Weight Bench">
+    </div>
+    <div class="product-details">
+        <h1>Weight Bench</h1>
+        <p class="price">1,000 ₪</p>
+        <div class="quantity">
+            <input type="number" id="product-quantity" value="1" min="1">
+        </div>
+        <button class="add-to-cart">Add to cart</button>
+    </div>
+</div>
+<div class="description-container">
+    <div class="description">
+        <h2>Description</h2>
+        <p>
+            The <strong>Weight Bench</strong> is a fundamental piece of equipment for any fitness enthusiast,
+            designed to support a variety of strength training exercises.
+            It features an ergonomic design for maximum comfort and stability during workouts.
+            Durable materials ensure long-lasting performance, making it ideal for both home and professional gyms.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_body_js %}
+<script src="{{ url_for('WeightBench.static', filename='js/WeightBench.js') }}"></script>
+<script src="{{ url_for('shop.static', filename='js/shop.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,59 @@
+
+.admin-login-container {
+    width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.admin-login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.admin-login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-login-container label {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+}
+
+.admin-login-container input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.admin-login-container button {
+    background: #000000;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.admin-login-container button:hover {
+    background-color: #000000;
+    color: #b93639;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}

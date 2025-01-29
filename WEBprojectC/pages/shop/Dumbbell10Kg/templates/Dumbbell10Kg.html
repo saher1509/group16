@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Dumbbell 10 Kg' %}
+
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('shop.static', filename='css/products.css') }}">
+{% endblock %}
+
+{% block page_body_main_content %}
+
+<div class="product-page">
+    <div class="product-image" data-size="medium">
+        <img src="{{ url_for('Dumbbell10Kg.static', filename='images/product6.png') }}" alt="Dumbbell 10 Kg">
+    </div>
+    <div class="product-details">
+        <h1>Dumbbell 10 Kg</h1>
+        <p class="price">100 ₪</p>
+        <div class="quantity">
+            <input type="number" id="product-quantity" value="1" min="1">
+        </div>
+        <button class="add-to-cart">Add to cart</button>
+    </div>
+</div>
+<div class="description-container">
+    <div class="description">
+        <h2>Description</h2>
+        <p>
+            The <strong>Dumbbell 10 Kg</strong> is a versatile and essential fitness tool designed for strength
+            training and muscle building.
+            With a durable grip and balanced weight, this dumbbell is perfect for both home and professional gym
+            use.
+            Its compact design makes it easy to store, and the durable construction ensures long-lasting performance
+            for all your workout needs.
+        </p>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block page_body_js %}
+<script src="{{ url_for('Dumbbell10Kg.static', filename='js/Dumbbell10Kg.js') }}"></script>
+<script src="{{ url_for('shop.static', filename='js/shop.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="{{ page_lang|default('en', true) }}">
+<head>
+    {% block page_head %}
+    {# Title #}
+    <title>{{ page_head_title_author|default('Gym Equipment', true) }} | {{ page_head_title|default('Gym Equipment
+        Store', true) }}</title>
+
+    {# Meta tags #}
+    {% block page_head_meta %}
+    <base href="/"/>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Gym Equipment"/>
+    <meta name="description" content="Shop high-quality gym and fitness equipment"/>
+    <meta name="keywords" content="gym, fitness, sports, equipment, shopping"/>
+    {% block page_head_meta_extra %}{% endblock %}
+    {% endblock %}
+
+    {# Favicon #}
+    <link rel="icon" href="{{ url_for('static', filename='images/GYM-LOGO.png') }}"/>
+
+    {# Base CSS #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}"/>
+    {% block page_head_css %}{% endblock %}
+    {% endblock %}
+</head>
+<body>
+{% block page_body_content %}
+
+{# Header #}
+{% block page_body_header %}
+<header class="page-header">
+    {% block page_body_header_content %}
+
+    {# Main Header #}
+    <div class="logo">
+        <a href="{{ url_for('homepage.index') }}">
+            <img src="{{ url_for('static', filename='images/GYM-LOGO.png') }}" alt="Gym Equipment Logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('about.index') }}"
+                   class="{% if request.path == url_for('about.index') %}active{% endif %}">ABOUT US</a></li>
+            <li><a href="{{ url_for('shop.index') }}"
+                   class="{% if request.path == url_for('shop.index') %}active{% endif %}">SHOP</a></li>
+
+
+
+        </ul>
+    </nav>
+    <div class="icons">
+        <a href="{{ url_for('cart.index') }}" class="icon cart-icon">
+            🛒<span id="cart-count">0</span>
+        </a>
+        <a href="#" class="icon-search">🔍</a>
+        <div id="search-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="search-by-label">Search by:</p>
+                <select id="search-filter">
+                    <option value="name">Name</option>
+                    <option value="category">Category</option>
+                    <option value="price">Price</option>
+                </select>
+                <input id="search-input" type="text" placeholder="Enter your search...">
+                <button id="search-button">Search</button>
+                <div id="search-results"></div>
+                <p id="no-results-message">Sorry, no results found!</p>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+</header>
+{% endblock %}
+
+{# Main Content #}
+{% block page_body_main %}
+<main class="page-main">
+    {% block page_body_main_content %}
+    {% endblock %}
+</main>
+{% endblock %}
+
+{# Footer #}
+{% block page_body_footer %}
+<footer class="page-footer">
+    {% block page_body_footer_content %}
+    <a href="{{ url_for('contact.index') }}" class="footer-link">CONTACT US</a>
+    {% endblock %}
+</footer>
+{% endblock %}
+
+{% endblock %}
+
+{# JS #}
+<script src="{{ url_for('search.static', filename='js/search.js') }}"></script>
+{% block page_body_js %}{% endblock %}
+</body>
+</html>

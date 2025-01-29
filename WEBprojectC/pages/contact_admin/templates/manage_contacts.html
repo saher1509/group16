@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('contact_admin.static', filename='css/manage_contacts.css') }}">
+{% endblock %}
+
+{% block page_body_main_content %}
+<h2>📩 Manage Contact Submissions</h2>
+
+<div class="contact-container">
+    <table class="contact-table">
+        <tr>
+            <th>🆔 ID</th>
+            <th>👤 Name</th>
+            <th>✉️ Email</th>
+            <th>📞 Phone</th>
+            <th>💬 Message</th>
+            <th>📅 Contact Date</th>
+            <th>🗑️ Delete</th>
+        </tr>
+        {% for contact in contacts %}
+        <tr>
+            <td>{{ contact._id }}</td>
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.phone }}</td>
+            <td>{{ contact.message }}</td>
+            <td>{{ contact.timestamp }}</td>
+            <td>
+                <form method="POST">
+                    <input type="hidden" name="contact_id" value="{{ contact._id }}">
+                    <button type="submit">🗑️ Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<script src="{{ url_for('shop.static', filename='js/shop.js') }}"></script>
+
+
+{% endblock %}

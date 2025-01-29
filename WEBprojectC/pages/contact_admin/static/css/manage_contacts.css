@@ -1,0 +1,52 @@
+/* General styling */
+body {
+    font-family: Calibri, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Container for the table */
+.contact-container {
+    width: 80%;
+    margin: 100px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+/* Table styling */
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.contact-table th,
+.contact-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.contact-table th {
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+}
+
+/* Button styling inside the table */
+.contact-table button {
+    background-color: #0000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-table button:hover {
+    background-color: #000000;
+    color: #b93639;
+}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('orders_admin.static', filename='css/manage_orders.css') }}">
+{% endblock %}
+
+{% block page_body_main_content %}
+<h2 class="orders-title">📦 Orders Table</h2>
+
+<div class="orders-container">
+    <table class="orders-table">
+        <tr>
+            <th>🆔 ID</th>
+            <th>👤 Customer</th>
+            <th>📍 Address</th>
+            <th>📞 Phone</th>
+            <th>✉️ Email</th>
+            <th>🛒 Ordered Items</th>
+            <th>📝 Notes</th>
+            <th>📅 Order Date</th>
+        </tr>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order._id }}</td>
+            <td>{{ order.first_name }} {{ order.last_name }}</td>
+            <td>{{ order.street_address }}, {{ order.city }}</td>
+            <td>{{ order.phone }}</td>
+            <td>{{ order.email }}</td>
+            <td>
+                <ul>
+                    {% for item in order.cart_items %}
+                    <li>{{ item.name }} × {{ item.quantity }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td>{{ order.notes }}</td>
+            <td>{{ order.order_date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<script src="{{ url_for('shop.static', filename='js/shop.js') }}"></script>
+
+{% endblock %}

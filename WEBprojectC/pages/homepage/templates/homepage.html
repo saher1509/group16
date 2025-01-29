@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Homepage' %}
+
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('homepage.static', filename='css/homepage.css') }}">
+{% endblock %}
+
+{% block page_body_main_content %}
+
+<div class="hero">
+    <img src="{{ url_for('homepage.static', filename='images/GYMHOMEE.png') }}" alt="Gym Background">
+    <h1>SHOPPING GYM, FITNESS & SPORT</h1>
+</div>
+<div class="welcome-message">
+    WELCOME TO GYM EQUIPMENT WEBSITE
+</div>
+{% endblock %}
+
+{% block page_body_js %}
+<script src="{{ url_for('shop.static', filename='js/shop.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('product_admin.static', filename='css/manage_products.css') }}">
+{% endblock %}
+
+{% block page_body_main_content %}
+<h2>📦 Products Management</h2>
+
+<div class="inventory-container">
+    <table class="inventory-table">
+        <thead>
+        <tr>
+            <th>🔢 ID</th>
+            <th>📦 Product Name</th>
+            <th>📊 Current Stock</th>
+            <th>✏️ Update</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.product_id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.stock }}</td>
+            <td>
+                <form method="POST" class="update-form">
+                    <input type="hidden" name="product_id" value="{{ product.product_id }}">
+                    <input type="number" name="new_stock" min="1" required>
+                    <button type="submit">💾 Update</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script src="{{ url_for('shop.static', filename='js/shop.js') }}"></script>
+
+{% endblock %}

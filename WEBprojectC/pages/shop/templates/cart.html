@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Shopping Cart' %}
+
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('shop.static', filename='css/cart.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+<!-- Empty Cart Section -->
+<div id="empty-cart" class="cart-empty">
+    <h1>SHOPPING CART</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Your shopping cart is empty</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="{{ url_for('shop.index') }}" class="return-to-shop">Return to shop</a>
+</div>
+
+<!-- Filled Cart Section -->
+<div id="filled-cart" class="cart-filled">
+    <h1>SHOPPING CART</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        </thead>
+        <tbody id="cart-items">
+        <!-- Items will be dynamically inserted here -->
+        </tbody>
+    </table>
+    <div id="cart-total">
+        <strong>Total: </strong><span id="total-amount">0</span>
+        <a href="{{ url_for('checkout.index') }}" class="checkout-button">Proceed to checkout</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_body_js %}
+<script src="{{ url_for('shop.static', filename='js/cart.js') }}" defer></script>
+
+
+{% endblock %}

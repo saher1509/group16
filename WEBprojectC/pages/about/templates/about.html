@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'About' %}
+
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('about.static', filename='css/about.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+<h1>ABOUT US</h1>
+<p>
+    As two passionate fitness enthusiasts, we founded <strong>GYM EQUIPMENT</strong> to share our love for sports and
+    fitness with
+    the world. Our mission is to provide high-quality fitness equipment that empowers individuals to achieve their
+    health and
+    fitness goals. We believe that access to top-of-the-line equipment is essential for a rewarding and effective
+    workout
+    experience. Your progress and success are our ultimate measure of achievement.
+</p>
+
+<div class="images-section">
+    <img src="{{ url_for('about.static', filename='images/gym-equipment1.png') }}" alt="Gym Equipment 1">
+    <img src="{{ url_for('about.static', filename='images/GYM-LOGO.png') }}" alt="Gym Logo">
+    <img src="{{ url_for('about.static', filename='images/gym-equipment2.png') }}" alt="Gym Equipment 2">
+</div>
+{% endblock %}
+
+{% block page_body_js %}
+<script src="{{ url_for('shop.static', filename='js/shop.js') }}"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

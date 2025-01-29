@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Squats Machine' %}
+
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('shop.static', filename='css/products.css') }}">
+{% endblock %}
+
+{% block page_body_main_content %}
+<div class="product-page">
+    <div class="product-image" data-size="large">
+        <img src="{{ url_for('SquatsMachine.static', filename='images/product5.png') }}" alt="Squats Machine">
+    </div>
+    <div class="product-details">
+        <h1>Squats Machine</h1>
+        <p class="price">3,000 ₪</p>
+        <div class="quantity">
+            <input type="number" id="product-quantity" value="1" min="1">
+        </div>
+        <button class="add-to-cart">Add to cart</button>
+    </div>
+</div>
+<div class="description-container">
+    <div class="description">
+        <h2>Description</h2>
+        <p>
+            The <strong>Squats Machine</strong> is an essential piece of gym equipment designed to enhance leg
+            strength
+            and overall lower body performance. With its durable construction and ergonomic design, it provides
+            a safe and effective workout experience for users of all fitness levels.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_body_js %}
+<script src="{{ url_for('SquatsMachine.static', filename='js/SquatsMachine.js') }}"></script>
+<script src="{{ url_for('shop.static', filename='js/shop.js') }}"></script>
+{% endblock %}

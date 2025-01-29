@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('product_admin.static', filename='css/admin_login.css') }}">
+{% endblock %}
+
+{% block page_body_main_content %}
+<div class="admin-login-container">
+    <h2>🔒 Contacts Management Login</h2>
+    <h2>(Not For Customers)</h2>
+    <form method="POST">
+        <label for="password">📌 Temporary Password:</label>
+        <input type="password" name="password" >
+        <button type="submit">Login</button>
+    </form>
+    {% for message in get_flashed_messages() %}
+    <p>{{ message }}</p>
+    {% endfor %}
+</div>
+<script src="{{ url_for('shop.static', filename='js/shop.js') }}"></script>
+
+
+{% endblock %}
